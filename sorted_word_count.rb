@@ -9,6 +9,9 @@ counts = word_list.tally
 sorted = counts.sort_by {| word, count | count }
 top_five = sorted.last(5)
 
-top_five.reverse_each do |word, count|
-  puts "#{word}: #{count}"
-end
+# top_five.reverse_each do |word, count|
+#   puts "#{word}: #{count}"
+# end
+
+# replace reverse_each with reverse.map
+puts top_five.reverse.map { |word, count| "#{word}: #{count}"}
