@@ -6,5 +6,6 @@ puts words_from_string(raw_text)
   .tally
   .sort_by {|word, count| count}
   .last(5)
+  .tap { |result| puts "only the last five: #{result}\n\n" }
   .reverse
   .map {|word, count| "#{word}: #{count}"}
