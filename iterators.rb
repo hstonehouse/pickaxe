@@ -17,3 +17,12 @@ end
 # if you don't provide an argument to reduce, it'll use the first
 # element of the collection as the initial value
 [1,3,5,7].reduce { |sum, element| sum + element } # also returns 16
+
+# pass reduce the name of the method you want to apply
+# :+ is the symbol corresponding to the method +
+[1,3,5,7].reduce(:+) # also returns 16
+# but you can just use sum
+[1,3,5,7].sum
+
+# multiply
+p [1,3,5,7].reduce(:*) # returns 105
