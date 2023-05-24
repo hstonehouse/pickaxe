@@ -11,3 +11,9 @@ f = [
 f.each.with_index do |line, index|
   puts "Line #{index} is: #{line}"
 end
+
+# reduce
+[1,3,5,7].reduce(0) { |sum, element| sum + element } # returns 16
+# if you don't provide an argument to reduce, it'll use the first
+# element of the collection as the initial value
+[1,3,5,7].reduce { |sum, element| sum + element } # also returns 16
